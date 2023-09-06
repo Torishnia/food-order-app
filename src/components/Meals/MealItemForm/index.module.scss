@@ -1,19 +1,21 @@
+@import '../../../variables.scss';
+
 .form {
   text-align: right;
 
   & button {
     padding: 0.25rem 2rem;
-    border: 1px solid #c70404;
+    border: 1px solid $redColor;
     border-radius: 20px;
-    background-color: #c70404;
-    color: white;
+    background-color: $redColor;
+    color: $whiteColor;
     font-weight: bold;
     font: inherit;
     cursor: pointer;
 
     &:hover, &:active {
-      background-color: #a80303;
-      border-color: #a80303;
+      background-color: $hoverRed;
+      border-color: $hoverRed;
     }
   }
 }

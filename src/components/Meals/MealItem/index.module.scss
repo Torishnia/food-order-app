@@ -1,9 +1,11 @@
+@import '../../../variables.scss';
+
 .meal {
   display: flex;
   justify-content: space-between;
   margin: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid $greyColor;
 
   & h3 {
     margin: 0 0 0.25rem 0;
@@ -18,5 +20,5 @@
   margin-top: 0.25rem;
   font-weight: bold;
   font-size: 1.25rem;
-  color: #a80303;
+  color: $hoverRed;
 }

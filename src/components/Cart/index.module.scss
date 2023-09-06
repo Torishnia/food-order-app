@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .cart_items {
   margin: 0;
   padding: 0;
@@ -19,27 +21,27 @@
   text-align: right;
 
   & .button_close {
-    color: #c70404;
+    color: $redColor;
   }
 
   & .button_order {
-    background-color: #c70404;
-    color: white;
+    background-color: $redColor;
+    color: $whiteColor;
   }
 
   & button {
     margin-left: 1rem;
     padding: 0.5rem 2rem;
-    border: 1px solid #c70404;
+    border: 1px solid $redColor;
     border-radius: 25px;
     background-color: transparent;
     font: inherit;
     cursor: pointer;
 
     &:hover, &:active {
-      background-color: #5a1a01;
-      border-color: #5a1a01;
-      color: white;
+      background-color: $darkRedColor;
+      border-color: $darkRedColor;
+      color: $whiteColor;
     }
   }
 }

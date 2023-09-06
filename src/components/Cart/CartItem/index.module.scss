@@ -1,14 +1,16 @@
+@import '../../../variables.scss';
+
 .cart_item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 1rem 0;
   padding: 1rem 0;
-  border-bottom: 2px solid #8a2b06;
+  border-bottom: 2px solid $hoverRed;
 
   & h2 {
     margin: 0 0 0.5rem 0;
-    color: #363636;
+    color: $darkGreyColor;
   }
 }
 
@@ -20,15 +22,15 @@
 
   & .price {
     font-weight: bold;
-    color: #8a2b06;
+    color: $hoverRed;
   }
 
   & .amount {
     padding: 0.25rem 0.75rem;
     font-weight: bold;
-    border: 1px solid #ccc;
+    border: 1px solid $greyColor;
     border-radius: 6px;
-    color: #363636;
+    color: $darkGreyColor;
   }
 }
 
@@ -44,15 +46,15 @@
     font-weight: bold;
     font-size: 1.25rem;
     background-color: transparent;
-    color: #8a2b06;
-    border: 1px solid #8a2b06;
+    color: $hoverRed;
+    border: 1px solid $hoverRed;
     border-radius: 6px;
     font: inherit;
     cursor: pointer;
     
     &:hover, &:active {
-      background-color: #8a2b06;
-      color: white;
+      background-color: $hoverRed;
+      color: $whiteColor;
     }
   }
 }

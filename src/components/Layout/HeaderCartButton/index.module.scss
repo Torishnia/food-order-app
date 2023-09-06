@@ -1,3 +1,5 @@
+@import '../../../variables.scss';
+
 .button {
   display: flex;
   justify-content: space-around;
@@ -6,7 +8,7 @@
   border: none;
   border-radius: 25px;
   background-color: #4d1601;
-  color: white;
+  color: $whiteColor;
   font-weight: bold;
   font: inherit;
   cursor: pointer;
@@ -26,11 +28,11 @@
   margin-left: 1rem;
   padding: 0.25rem 1rem;
   border-radius: 25px;
-  background-color: #c70404;
+  background-color: $redColor;
   font-weight: bold;
 
   &:hover, &:active {
-    background-color: #a80303;
+    background-color: $hoverRed;
   }
 }
 

@@ -1,3 +1,5 @@
+@import '../../../variables.scss';
+
 .input {
   display: flex;
   align-items: center;
@@ -11,7 +13,7 @@
   & input {
     padding-left: 0.5rem;
     width: 3rem;
-    border: 1px solid #ccc;
+    border: 1px solid $greyColor;
     border-radius: 5px;
     font: inherit;
   }
