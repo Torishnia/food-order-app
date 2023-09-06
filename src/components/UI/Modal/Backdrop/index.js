@@ -1,7 +1,7 @@
 import styles from './index.module.scss';
 
-const Backdrop = (props) => {
-  return <div className={styles.backdrop} />
+const Backdrop = ({ onClose }) => {
+  return <div className={styles.backdrop} onClick={onClose} />
 }
 
 export default Backdrop;
