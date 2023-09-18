@@ -1,0 +1,64 @@
+@import '../../../variables.scss';
+
+.form {
+  margin: 1rem 0;
+  height: 15rem;
+  overflow: auto;
+}
+
+.control {
+  margin-bottom: 0.5rem;
+
+  & label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+  }
+
+  & input {
+    max-width: 100%;
+    width: 20rem;
+    border: 1px solid $greyColor;
+    border-radius: 4px;
+    font: inherit;
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+
+  & button {
+    padding: 0.5rem 2rem;
+    background-color: transparent;
+    color: $redColor;
+    border: 1px solid $redColor;
+    border-radius: 25px;
+    font: inherit;
+    cursor: pointer;
+
+    &:hover, &:active {
+      background-color: $darkRedColor;
+      border-color: $darkRedColor;
+      color: $whiteColor;
+    }
+  }
+
+  & .submit {
+    background-color: $redColor;
+    color: $whiteColor;
+    border: 1px solid $redColor;
+  }
+}
+
+.invalid {
+  & p {
+    color: $hoverRed;
+  }
+
+  & input {
+    border-color: $hoverRed;
+    background-color: $whiteColor;
+  }
+} 
