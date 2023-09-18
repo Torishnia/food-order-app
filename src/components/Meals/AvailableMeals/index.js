@@ -7,10 +7,18 @@ import styles from './index.module.scss';
 const AvailableMeals = () => {
   const [meals, setMeals] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [httpError, setHttpError] = useState();
 
   useEffect(() => {
     const fetchMeals = async () => {
-      const response = await fetch('https://food-order-fcd1a-default-rtdb.firebaseio.com/meals.json');
+      const response = await fetch(
+        'https://food-order-fcd1a-default-rtdb.firebaseio.com/meals.json'
+      );
+
+      if (!response.ok) {
+        throw new Error('Someting went wrong!');
+      }
+
       const responseData = await response.json();
 
       const loadedMeals = [];
@@ -28,8 +36,19 @@ const AvailableMeals = () => {
       setIsLoading(false);
     }
 
-    fetchMeals();
+    fetchMeals().catch((error) => {
+      setIsLoading(false);
+      setHttpError(error.message);
+    });
   }, [])
+
+  if (httpError) {
+    return (
+      <section className={styles.meals_error}>
+        <p>Someting went wrong!</p>
+      </section>
+    )
+  }
 
   return (
     <>

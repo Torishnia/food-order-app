@@ -18,6 +18,11 @@
   color: $whiteColor;
 }
 
+.meals_error {
+  text-align: center;
+  color: $redColor;
+}
+
 @keyframes meals-appear {
   from {
     opacity: 0;
