@@ -5,7 +5,7 @@ const isEmpty = (value) => value.trim() === '';
 const isFiveChars = (value) => value.trim().length === 5;
 const isTenChars = (value) => value.trim().length === 10;
 
-const Checkout = ({ onCancel }) => {
+const Checkout = ({ onConfirm, onCancel }) => {
   const [formInputsValidity, setFormInputsValidity] = useState({
     name: true,
     phone: true,
@@ -53,6 +53,14 @@ const Checkout = ({ onCancel }) => {
     if (!formIsValid) {
       return;
     }
+
+    onConfirm({
+      name: enteredName,
+      phone: enteredPhone,
+      street: enteredStreet,
+      postal: enteredPostalCode,
+      city: enteredCity,
+    })
   }
 
   const nameControlClasses = `${styles.control} ${
